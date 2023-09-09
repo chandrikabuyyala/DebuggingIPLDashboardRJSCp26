@@ -1,9 +1,8 @@
 import './index.css'
 
 const MatchCard = props => {
-  const {matchDetails} = props
-  const {competingTeamLogo, competingTeam, matchStatus, result} = matchDetails
-  const getMatchStatusClassName = status =>
+  const {matchData} = props
+  const {competingTeamLogo, competingTeam, matchStatus, result} = matchData
     status === 'Won' ? 'match-won' : 'match-lost'
   const matchStatusClassName = `match-status ${getMatchStatusClassName(
     matchStatus,
